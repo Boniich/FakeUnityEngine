@@ -25,13 +25,16 @@
     <Filter Include="Archivos de origen\Imgui origen">
       <UniqueIdentifier>{b581f178-1004-4610-8e74-dd6f782cee17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\UI encabezado\MenuBar encabezado">
+      <UniqueIdentifier>{20b15a2d-76ad-49dc-8606-19f17b39dbe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\UI origen\MenuBar origen">
+      <UniqueIdentifier>{ee2d0f53-79b4-4bcc-b1c0-05e6178a3938}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuBar.cpp">
-      <Filter>Archivos de origen\UI origen</Filter>
     </ClCompile>
     <ClCompile Include="MainFacade.cpp">
       <Filter>Archivos de origen\UI origen</Filter>
@@ -54,11 +57,11 @@
     <ClCompile Include="imgui\imgui-SFML.cpp">
       <Filter>Archivos de origen\Imgui origen</Filter>
     </ClCompile>
+    <ClCompile Include="MenuBar.cpp">
+      <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuBar.h">
-      <Filter>Archivos de encabezado\UI encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="MainFacade.h">
       <Filter>Archivos de encabezado\UI encabezado</Filter>
     </ClInclude>
@@ -91,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="imgui\imstb_truetype.h">
       <Filter>Archivos de encabezado\Imgui encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuBar.h">
+      <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
