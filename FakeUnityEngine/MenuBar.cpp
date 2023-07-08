@@ -176,16 +176,27 @@ void MenuBar::addCreateList() {
 	if (ImGui::MenuItem("C# Script")) { /* Do stuff */ }
 	
 	if (ImGui::BeginMenu("Visual Scripting")) {
+		if (ImGui::MenuItem("State Graph")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Script Graph")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	if (ImGui::BeginMenu("Shader")) {
+		if (ImGui::MenuItem("Standard Surface Shader")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Unlit Shader")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Image Effect Shader")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Compute Shader")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Ray Tracing Shader")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	if (ImGui::MenuItem("Shader Variant Collection")) { /* Do stuff */ }
 	if (ImGui::BeginMenu("Testing")) {
+		if (ImGui::MenuItem("Testing Assembly Folder")) { /* Do stuff */ }
+		if (ImGui::MenuItem("C# Test Script")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	if (ImGui::BeginMenu("Playables")) {
+		if (ImGui::MenuItem("Playable Behaviour C# Script")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Playable Assets C# Script")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	if (ImGui::MenuItem("Assembly Definition")) { /* Do stuff */ }
@@ -193,9 +204,22 @@ void MenuBar::addCreateList() {
 	ImGui::Separator();
 
 	if (ImGui::BeginMenu("Text")) {
+		if (ImGui::MenuItem("Fonts Asset")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Font Asset Variant")) { /* Do stuff */ }
+		ImGui::Separator();
+		if (ImGui::MenuItem("Sprite Asset")) { /* Do stuff */ }
+		ImGui::Separator();
+		if (ImGui::MenuItem("Text StyleSheet")) { /* Do stuff */ }
+		ImGui::Separator();
+		if (ImGui::MenuItem("Color Gradient")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	if (ImGui::BeginMenu("TextMeshPro")) {
+		if (ImGui::MenuItem("Font Asset")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Font Asset Variant")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Sprite Asset")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Color Gradient")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Style Sheet")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	ImGui::Separator();
@@ -241,11 +265,23 @@ void MenuBar::addCreateList() {
 		ImGui::EndMenu();
 	}
 	if (ImGui::BeginMenu("UI Toolkit")) {
+		if (ImGui::MenuItem("Style Sheet")) { /* Do stuff */ }
+		if (ImGui::MenuItem("TSS Theme File")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Default Runtime Theme File")) { /* Do stuff */ }
+		if (ImGui::MenuItem("UI Document")) { /* Do stuff */ }
+		ImGui::Separator();
+		if (ImGui::MenuItem("Panel Settings Assets")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Editor Window")) { /* Do stuff */ }
+		ImGui::Separator();
+		if (ImGui::MenuItem("Text Settings")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	ImGui::Separator();
 
 	if (ImGui::BeginMenu("Search")) {
+		if (ImGui::MenuItem("Assets Index")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Prefabs Index")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Scenes Index")) { /* Do stuff */ }
 		ImGui::EndMenu();
 	}
 	if (ImGui::MenuItem("Brush")) { /* Do stuff */ }
