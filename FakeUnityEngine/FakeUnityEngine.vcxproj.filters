@@ -60,6 +60,9 @@
     <ClCompile Include="MenuBar.cpp">
       <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
     </ClCompile>
+    <ClCompile Include="FileButton.cpp">
+      <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFacade.h">
@@ -96,6 +99,9 @@
       <Filter>Archivos de encabezado\Imgui encabezado</Filter>
     </ClInclude>
     <ClInclude Include="MenuBar.h">
+      <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="FileButton.h">
       <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
     </ClInclude>
   </ItemGroup>
