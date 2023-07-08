@@ -1,7 +1,16 @@
 
 #ifndef MENUBAR_H
 
+#include "FileButton.h"
+
+class FileBUtton;
+
+using namespace MenuBarSpace;
+
 class MenuBar {
+	
+	FileButton* _fileButton = nullptr;
+
 private:
 	void addFileButton();
 	void addEditButton();
@@ -15,7 +24,8 @@ private:
 	void addHelpButton();
 
 public:
-
+	MenuBar();
+	~MenuBar();
 	void addMainMenuBar();
 };
 
