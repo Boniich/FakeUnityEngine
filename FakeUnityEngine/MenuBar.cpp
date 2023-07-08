@@ -8,6 +8,7 @@ void MenuBar::addMainMenuBar() {
 
 	this->addFileButton();
 	this->addEditButton();
+	this->addAssetsButton();
 
 	ImGui::EndMainMenuBar();
 
@@ -113,6 +114,193 @@ void MenuBar::addEditButton() {
 			if (ImGui::MenuItem("Shader Hardward Tier 3")) { /* Do stuff */ }
 			ImGui::EndMenu();
 		}
+
+		ImGui::EndMenu();
+	}
+}
+
+void MenuBar::add2DMenu() {
+
+	if (ImGui::BeginMenu("2D")) {
+
+		if (ImGui::BeginMenu("Sprites")) {
+			if (ImGui::MenuItem("Square")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Circle")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Capsule")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Isometric Diamond")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Hexagon Flat-Top")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Hexagon Pointed-Top")) { /* Do stuff */ }
+			if (ImGui::MenuItem("9-Sliced")) { /* Do stuff */ }
+			ImGui::EndMenu();
+		}
+
+		if (ImGui::BeginMenu("Tile Pallete")) {
+
+			if (ImGui::MenuItem("Rectangular")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Hexagonal Flat-Top")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Hexagon Pointed-Top")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Isometric")) { /* Do stuff */ }
+
+			ImGui::EndMenu();
+		}
+		if (ImGui::MenuItem("Sprite Shape Profile")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Phsics Material 2D")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Sprite Atlas")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Sprite Library Asset")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::BeginMenu("Tiles")) {
+
+			if (ImGui::MenuItem("Animeted Tile")) { /* Do stuff */ }
+			ImGui::Separator();
+			if (ImGui::MenuItem("Rule Tile")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Isometric Rule Tile")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Hexagonal Rule Tile")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Rule Override Tile")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Advanced Rule Override Tile")) { /* Do stuff */ }
+			if (ImGui::MenuItem("Custom Rule Tile Script")) { /* Do stuff */ }
+			ImGui::EndMenu();
+		}
+
+		ImGui::EndMenu();
+	}
+
+}
+
+void MenuBar::addCreateList() {
+	if (ImGui::MenuItem("Folder")) { /* Do stuff */ }
+	this->add2DMenu();
+	ImGui::Separator();
+	if (ImGui::MenuItem("C# Script")) { /* Do stuff */ }
+	
+	if (ImGui::BeginMenu("Visual Scripting")) {
+		ImGui::EndMenu();
+	}
+	if (ImGui::BeginMenu("Shader")) {
+		ImGui::EndMenu();
+	}
+	if (ImGui::MenuItem("Shader Variant Collection")) { /* Do stuff */ }
+	if (ImGui::BeginMenu("Testing")) {
+		ImGui::EndMenu();
+	}
+	if (ImGui::BeginMenu("Playables")) {
+		ImGui::EndMenu();
+	}
+	if (ImGui::MenuItem("Assembly Definition")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Assembly Definition Reference")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::BeginMenu("Text")) {
+		ImGui::EndMenu();
+	}
+	if (ImGui::BeginMenu("TextMeshPro")) {
+		ImGui::EndMenu();
+	}
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("Scene")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Scene Template")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Scene Template From Scene")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Scene Template Pipeline")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Prefab")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Prefab Variant")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("Audio Mixer")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("Material")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Lens Flare")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Render Texture")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Lightmap Parameters")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Lighting Settings")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Custom Render Texture")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("Animator Controller")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Animation")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Animation Override Controller")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Avatar Mask")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("Timeline")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Signal")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("Physic Material")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::MenuItem("GUI Skin")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Custom Font")) { /* Do stuff */ }
+	ImGui::Separator();
+
+	if (ImGui::BeginMenu("Legacy")) {
+		if (ImGui::MenuItem("Curbemap")) { /* Do stuff */ }
+		ImGui::EndMenu();
+	}
+	if (ImGui::BeginMenu("UI Toolkit")) {
+		ImGui::EndMenu();
+	}
+	ImGui::Separator();
+
+	if (ImGui::BeginMenu("Search")) {
+		ImGui::EndMenu();
+	}
+	if (ImGui::MenuItem("Brush")) { /* Do stuff */ }
+	if (ImGui::MenuItem("Terrain Layer")) { /* Do stuff */ }
+}
+
+
+void MenuBar::addAssetsButton() {
+	if(ImGui::BeginMenu("Assets")) {
+
+		if (ImGui::BeginMenu("Create")) {
+			this->addCreateList();
+			ImGui::EndMenu();
+		}
+		if (ImGui::MenuItem("Show in Explorer")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Open")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Delete")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Rename")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Copy Path", "Alt+Ctrl+C")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Open Scene Additive")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("View in Package Manager")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Import New Asset...")) { /* Do stuff */ }
+		if (ImGui::BeginMenu("Import Package")) {
+			if (ImGui::MenuItem("Custom Package")) { /* Do stuff */ }
+			ImGui::EndMenu();
+		}
+		if (ImGui::MenuItem("Export Package...")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Find Reference in Scene")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Select Dependencies")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Refresh", "Ctrl+R")) { /* Do stuff */ }
+		if (ImGui::MenuItem("Reimport")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Reimport All")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Extract From Prefab")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Update UXML Schema")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Open C# Project")) { /* Do stuff */ }
+		if (ImGui::MenuItem("View in Import Activity Window")) { /* Do stuff */ }
+		ImGui::Separator();
+
+		if (ImGui::MenuItem("Properties", "Alt+P")) { /* Do stuff */ }
 
 		ImGui::EndMenu();
 	}

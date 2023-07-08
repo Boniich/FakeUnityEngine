@@ -6,6 +6,8 @@ private:
 	void addFileButton();
 	void addEditButton();
 	void addAssetsButton();
+	void addCreateList();
+	void add2DMenu();
 	void addGameObjectButton();
 	void addComponentButton();
 	void addJobsButton();
