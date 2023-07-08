@@ -2,18 +2,19 @@
 #ifndef MENUBAR_H
 
 #include "FileButton.h"
+#include "EditButton.h"
 
 class FileBUtton;
+class EditButton;
 
 using namespace MenuBarSpace;
 
 class MenuBar {
 	
-	FileButton* _fileButton = nullptr;
+	MenuBarSpace::FileButton* _fileButton = nullptr;
+	MenuBarSpace::EditButton* _editButton = nullptr;
 
 private:
-	void addFileButton();
-	void addEditButton();
 	void addAssetsButton();
 	void addCreateList();
 	void add2DMenu();

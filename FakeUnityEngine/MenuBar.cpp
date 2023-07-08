@@ -2,11 +2,13 @@
 #include "imgui/imgui.h"
 
 MenuBar::MenuBar() {
-	_fileButton = new FileButton();
+	_fileButton = new MenuBarSpace::FileButton();
+	_editButton = new MenuBarSpace::EditButton();
 }
 
 MenuBar::~MenuBar() {
 	delete _fileButton;
+	delete _editButton;
 }
 
 void MenuBar::addMainMenuBar() {
@@ -14,85 +16,10 @@ void MenuBar::addMainMenuBar() {
 	ImGui::BeginMainMenuBar();
 
 	_fileButton->addFileButton();
-	this->addEditButton();
+	_editButton->addEditButton();
 	this->addAssetsButton();
 
 	ImGui::EndMainMenuBar();
-}
-
-void MenuBar::addEditButton() {
-	if (ImGui::BeginMenu("Edit")) {
-
-		if (ImGui::MenuItem("Undo Select Main Camera (GameObject...", "Ctrl+Z")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Redo", "Ctrl+Y")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Undo History", "Ctrl+U")) { /* Do stuff */ }
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Select All", "Ctrl+A")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Deselect All", "Ctrl+D")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Select Children", "Ctrl+C")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Select Prefab Root", "Ctrl+Shift+R")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Invert Selection", "Ctrl+I")) { /* Do stuff */ }
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Cut", "Ctrl+X")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Copy", "Ctrl+C")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Paste", "Ctrl+V")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Paste As Child", "Ctrl+Shift+V")) { /* Do stuff */ }
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Duplicate", "Ctrl+D")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Rename")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Delete")) { /* Do stuff */ }
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Frame Selected", "F")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Lock View to Selected", "Ctrl+F")) { /* Do stuff */ }
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Find", "Ctrl+F")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Search All...", "Ctrl+K")) { /* Do stuff */ }
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Play", "Ctrl+P")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Pause", "Ctrl+Shift+P")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Step", "Ctrl+Alt+P")) { /* Do stuff */ }
-		ImGui::Separator();
-
-
-		if (ImGui::MenuItem("Sign in")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Sign out", NULL, false, false)) { /* Do stuff */ }
-		if (ImGui::MenuItem("Step", "Ctrl+Alt+P")) { /* Do stuff */ }
-		ImGui::Separator();
-
-
-		if (ImGui::BeginMenu("Selection")) {
-			if (ImGui::MenuItem("Load Selection 1")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Load Selection 2")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Load Selection 3")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Save Selection 1")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Save Selection 2")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Save Selection 3")) { /* Do stuff */ }
-			ImGui::EndMenu();
-		}
-		ImGui::Separator();
-
-		if (ImGui::MenuItem("Project Settings...")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Preferences...")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Shortcuts...")) { /* Do stuff */ }
-		if (ImGui::MenuItem("Clear All PlayerPref...")) { /* Do stuff */ }
-		ImGui::Separator();
-
-
-		if (ImGui::BeginMenu("Graphics Tier")) {
-			if (ImGui::MenuItem("Shader Hardward Tier 1")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Shader Hardward Tier 2")) { /* Do stuff */ }
-			if (ImGui::MenuItem("Shader Hardward Tier 3")) { /* Do stuff */ }
-			ImGui::EndMenu();
-		}
-
-		ImGui::EndMenu();
-	}
 }
 
 void MenuBar::add2DMenu() {
