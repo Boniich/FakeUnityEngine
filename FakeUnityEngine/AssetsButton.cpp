@@ -3,11 +3,15 @@
 
 using namespace MenuBarSpace;
 
+AssetsButton::AssetsButton() {
+	_createMenuItem = new CreateMenuItemSpace::CreateMenuItem();
+}
+
 void AssetsButton::addAssetsButton() {
 	if (ImGui::BeginMenu("Assets")) {
 
 		if (ImGui::BeginMenu("Create")) {
-			//this->addCreateList();
+			_createMenuItem->addCreateMenuItem();
 			ImGui::EndMenu();
 		}
 		if (ImGui::MenuItem("Show in Explorer")) { /* Do stuff */ }
