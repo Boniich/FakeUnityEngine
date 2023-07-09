@@ -66,6 +66,9 @@
     <ClCompile Include="EditButton.cpp">
       <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
     </ClCompile>
+    <ClCompile Include="AssetsButton.cpp">
+      <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFacade.h">
@@ -108,6 +111,9 @@
       <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
     </ClInclude>
     <ClInclude Include="EditButton.h">
+      <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetsButton.h">
       <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
     </ClInclude>
   </ItemGroup>

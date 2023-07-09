@@ -3,9 +3,11 @@
 
 #include "FileButton.h"
 #include "EditButton.h"
+#include "AssetsButton.h"
 
 class FileBUtton;
 class EditButton;
+class AssetsButton;
 
 using namespace MenuBarSpace;
 
@@ -13,9 +15,9 @@ class MenuBar {
 	
 	MenuBarSpace::FileButton* _fileButton = nullptr;
 	MenuBarSpace::EditButton* _editButton = nullptr;
+	MenuBarSpace::AssetsButton* _assetsButton = nullptr;
 
 private:
-	void addAssetsButton();
 	void addCreateList();
 	void add2DMenu();
 	void addGameObjectButton();

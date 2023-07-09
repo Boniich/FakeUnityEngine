@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssetsButton.cpp" />
     <ClCompile Include="EditButton.cpp" />
     <ClCompile Include="FileButton.cpp" />
     <ClCompile Include="imgui\imgui-SFML.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="MenuBar.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssetsButton.h" />
     <ClInclude Include="EditButton.h" />
     <ClInclude Include="FileButton.h" />
     <ClInclude Include="Icons\IconsFontAwesome5.h" />
