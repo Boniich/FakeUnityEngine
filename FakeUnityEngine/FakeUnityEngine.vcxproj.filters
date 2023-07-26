@@ -31,6 +31,12 @@
     <Filter Include="Archivos de origen\UI origen\MenuBar origen">
       <UniqueIdentifier>{ee2d0f53-79b4-4bcc-b1c0-05e6178a3938}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\UI encabezado\Transform encabezado">
+      <UniqueIdentifier>{88c915a9-273a-45fa-bba5-2e3238dbc4aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\UI origen\Transform origen">
+      <UniqueIdentifier>{f9639857-5170-4442-aa23-bc5de320eab6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -70,6 +76,9 @@
       <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
     </ClCompile>
     <ClCompile Include="CreateMenuItem.cpp">
+      <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformUI.cpp">
       <Filter>Archivos de origen\UI origen\MenuBar origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -121,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="CreateMenuItem.h">
       <Filter>Archivos de encabezado\UI encabezado\MenuBar encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformUI.h">
+      <Filter>Archivos de encabezado\UI encabezado\Transform encabezado</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

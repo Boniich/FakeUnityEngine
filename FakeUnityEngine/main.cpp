@@ -12,6 +12,20 @@ int main()
 
     MainFacade _mainFacade;
 
+    float XTranslation = 1.0f;
+    float YTranslation = 0.0f;
+    float ZTranslation = 0.0f;
+
+    float XRotation = 0.0f;
+    float YRotation = 0.0f;
+    float ZRotation = 0.0f;
+
+    float XScale = 0.0f;
+    float YScale = 0.0f;
+    float ZScale = 0.0f;
+
+    float inputWidth = 50;
+
     sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
     ImGui::SFML::Init(window);
 
@@ -53,8 +67,15 @@ int main()
 
         ImGui::ShowDemoWindow();
 
+
+
         _mainFacade.runUI();
+
+
+
         window.clear();
+
+
 
         // renderizamos cosas en el fondo
         
