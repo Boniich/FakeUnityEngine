@@ -19,6 +19,21 @@ void MenuBar::addMainMenuBar() {
 	_fileButton->addFileButton();
 	_editButton->addEditButton();
 	_assetsButton->addAssetsButton();
+	if (ImGui::BeginMenu("Component")) {
+		ImGui::EndMenu();
+	}
+
+	if (ImGui::BeginMenu("Jobs")) {
+		ImGui::EndMenu();
+	}
+
+	if (ImGui::BeginMenu("Window")) {
+		ImGui::EndMenu();
+	}
+
+	if (ImGui::BeginMenu("Help")) {
+		ImGui::EndMenu();
+	}
 
 	ImGui::EndMainMenuBar();
 }
